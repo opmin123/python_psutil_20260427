@@ -9,6 +9,7 @@ client_server.set_missing_host_key_policy(p.AutoAddPolicy)  #自动接收新主�
 client_server.connect("192.168.0.15", username="root",password="123456")
 
 sftp: SF = client_server.open_sftp()  #创建SFTP客户端
+
 try:
     #上传文件到远程服务器
     sftp.put(localpath="C:/Users/73161/Desktop/20251205/deploy_aliyun.yaml", remotepath="/root/sftp_test/deploy_aliyun.yaml")
