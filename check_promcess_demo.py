@@ -3,6 +3,7 @@
 """
 import psutil as p
 def check_process(process_name):
+    process_info = p.process_iter()
     for proc in p.process_iter(['pid', 'name', 'cpu_percent', 'memory_info']):
         if process_name.lower() in proc.info['name'].lower():
             memory_mb = proc.info['memory_info'].rss / (1024**2)
