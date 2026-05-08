@@ -3,6 +3,7 @@ python OS 模块
 """
 import os
 import time
+import shutil
 
 current_dir = os.getcwd()
 #print(f"当前工作目录: {current_dir}")
